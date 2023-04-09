@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Component({
@@ -26,16 +26,26 @@ export class LoginComponent {
       return;
     }
   
-    // Formdan alınan veriler
     const email = this.loginForm.get('email')?.value;
     const password = this.loginForm.get('password')?.value;
   
-    // API'ye POST isteği yapma
-    this.http.post('http://localhost:3000/users', { email, password }).subscribe(
-      (response) => {
-        console.log('API cevabı:', response);
-        this.router.navigate(['/dashboard']);
-        // İşlem başarılı olduğunda yapılacaklar
+    // Kullanıcı adı ve şifreyi başlıklara ekleyin
+    const headers = new HttpHeaders({
+      'username': email,
+      'password': password
+    });
+  
+    // GET isteğini yapın ve başlıkları gönderin
+    this.http.get('http://localhost:3000/user/login', { headers, observe: 'response' }).subscribe(
+      (response: HttpResponse<any>) => {
+        if (response.status === 200) {
+          console.log('API cevabı:', response.body);
+          // İşlem başarılı olduğunda, kullanıcıyı /dashboard sayfasına yönlendirin
+          this.router.navigate(['/dashboard']);
+        } else {
+          console.error('API hatası:', response.status);
+          // Hata durumunda yapılacaklar
+        }
       },
       (error) => {
         console.error('API hatası:', error);
@@ -43,5 +53,4 @@ export class LoginComponent {
       }
     );
   }
-  
 }

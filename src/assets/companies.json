@@ -1,0 +1,16 @@
+[
+    {
+      "id": "1",
+      "name": "Şirket A",
+      "sector": "Teknoloji",
+      "address": "İstanbul, Türkiye",
+      "phone": "+90 123 456 78 90"
+    },
+    {
+      "id": "2",
+      "name": "Şirket B",
+      "sector": "Enerji",
+      "address": "Ankara, Türkiye",
+      "phone": "+90 987 654 32 10"
+    }
+  ]

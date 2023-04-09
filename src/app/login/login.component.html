@@ -1,23 +1,13 @@
-<div class="wrapper fadeInDown">
-    <div id="formContent">
-      <!-- Tabs Titles -->
-  
-      <!-- Icon -->
-      <div class="fadeIn first">
-        <img src="../assets/frekans_logo.gif" id="icon" alt="frekans_logo" />
-      </div>
-  
-      <!-- Login Form -->
-      <form>
-        <input type="text" id="login" class="fadeIn second" name="login" placeholder="Kullanıcı Adı">
-        <input type="text" id="password" class="fadeIn third" name="login" placeholder="Şifre">
-        <input type="submit" class="fadeIn fourth" value="Giriş">
-      </form>
-  
-      <!-- Remind Passowrd -->
-      <div id="formFooter">
-        <a class="underlineHover" href="#">Şifreyi Unuttum?</a>
-      </div>
-  
-    </div>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="email">E-posta:</label>
+    <input id="email" type="email" formControlName="email" required />
   </div>
+
+  <div>
+    <label for="password">Şifre:</label>
+    <input id="password" type="password" formControlName="password" required />
+  </div>
+
+  <button type="submit">Giriş Yap</button>
+</form>

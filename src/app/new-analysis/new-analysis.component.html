@@ -1,1 +1,31 @@
-<p>new-analysis works!</p>
+<form [formGroup]="riskForm" (ngSubmit)="onSubmitRisk()">
+    <div>
+      <label for="number">No</label>
+      <input id="number" formControlName="number" type="number">
+    </div>
+    <div>
+      <label for="riskDefinition">Risk Tanımı</label>
+      <input id="riskDefinition" formControlName="riskDefinition" type="text">
+    </div>
+    <div>
+      <label for="compliance">Uygunluk</label>
+      <select id="compliance" formControlName="compliance">
+        <option value="">Seçiniz</option>
+        <option value="evet">Evet</option>
+        <option value="hayır">Hayır</option>
+      </select>
+    </div>
+    <div>
+      <label for="comment">Yorum</label>
+      <textarea id="comment" formControlName="comment" rows="4" cols="50"></textarea>
+    </div>
+    <div>
+      <label for="responsiblePerson">Sorumlu Kişi</label>
+      <input id="responsiblePerson" formControlName="responsiblePerson" type="text">
+    </div>
+    <div>
+      <label for="solutionDate">Çözüm Tarihi</label>
+      <input id="solutionDate" formControlName="solutionDate" type="date">
+    </div>
+    <button type="submit">Risk Ekle</button>
+  </form>

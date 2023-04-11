@@ -1,0 +1,33 @@
+<form [formGroup]="companyForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="shortCompanyName">Şirket Adı (kısa)</label>
+      <input id="shortCompanyName" formControlName="shortCompanyName" type="text">
+    </div>
+    <div>
+      <label for="fullCompanyName">Şirket Adı (resmi)</label>
+      <input id="fullCompanyName" formControlName="fullCompanyName" type="text">
+    </div>
+    <div formGroupName="address">
+      <div>
+        <label for="street">Cadde/Sokak</label>
+        <input id="street" formControlName="street" type="text">
+      </div>
+      <div>
+        <label for="city">İl</label>
+        <input id="city" formControlName="city" type="text">
+      </div>
+      <div>
+        <label for="district">İlçe</label>
+        <input id="district" formControlName="district" type="text">
+      </div>
+      <div>
+        <label for="zipCode">Posta Kodu</label>
+        <input id="zipCode" formControlName="zipCode" type="text">
+      </div>
+    </div>
+    <div>
+      <label for="phone">Telefon</label>
+      <input id="phone" formControlName="phone" type="tel">
+    </div>
+    <button type="submit">Şirket Ekle</button>
+  </form>

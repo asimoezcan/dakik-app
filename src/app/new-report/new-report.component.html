@@ -1,1 +1,19 @@
-<p>new-report works!</p>
+<form [formGroup]="reportForm" (ngSubmit)="onSubmitReport()">
+    <div>
+      <label for="reportName">Rapor İsmi</label>
+      <input id="reportName" formControlName="reportName" type="text">
+    </div>
+    <div>
+      <label for="date">Tarih</label>
+      <input id="date" formControlName="date" type="date">
+    </div>
+    <div>
+      <label for="revisionNumber">Revize No</label>
+      <input id="revisionNumber" formControlName="revisionNumber" type="number">
+    </div>
+    <div>
+      <label for="note">Not</label>
+      <textarea id="note" formControlName="note" rows="4" cols="50"></textarea>
+    </div>
+    <button type="submit">Rapor Ekle</button>
+  </form>

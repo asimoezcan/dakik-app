@@ -8,13 +8,23 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CompainesComponent } from './compaines/compaines.component';
+import { CompanyComponent } from './company/company.component';
+import { ReportsComponent } from './reports/reports.component';
+import { NewReportComponent } from './new-report/new-report.component';
+import { AnalysisComponent } from './analysis/analysis.component';
+import { NewAnalysisComponent } from './new-analysis/new-analysis.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    CompainesComponent
+    CompainesComponent,
+    CompanyComponent,
+    ReportsComponent,
+    NewReportComponent,
+    AnalysisComponent,
+    NewAnalysisComponent
   ],
   imports: [
     BrowserModule,

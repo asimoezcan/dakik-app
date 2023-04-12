@@ -14,6 +14,7 @@ import { NewReportComponent } from './new-report/new-report.component';
 import { AnalysisComponent } from './analysis/analysis.component';
 import { NewAnalysisComponent } from './new-analysis/new-analysis.component';
 import { NewCompanyComponent } from './new-company/new-company.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NewCompanyComponent } from './new-company/new-company.component';
     NewReportComponent,
     AnalysisComponent,
     NewAnalysisComponent,
-    NewCompanyComponent
+    NewCompanyComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

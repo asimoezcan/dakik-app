@@ -7,18 +7,24 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./new-report.component.scss']
 })
 export class NewReportComponent {
-  reportForm: FormGroup;
+  assessmentForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {
-    this.reportForm = this.formBuilder.group({
+    this.assessmentForm = this.formBuilder.group({
       reportName: [''],
-      date: [''],
-      revisionNumber: [''],
-      note: [''],
+      reportDate: [''],
+      reportValidityDate: [''],
+      riskAssessmentMethod: [''],
+      riskAssessmentTeam: this.formBuilder.group({
+        firstName: [''],
+        lastName: [''],
+        title: [''],
+      }),
+      workplaceSection: [''],
     });
   }
 
-  onSubmitReport() {
-    console.log(this.reportForm.value);
+  onSubmitAssessment() {
+    console.log(this.assessmentForm.value);
   }
 }

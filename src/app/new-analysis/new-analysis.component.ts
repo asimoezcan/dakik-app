@@ -7,20 +7,39 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./new-analysis.component.scss']
 })
 export class NewAnalysisComponent {
-  riskForm: FormGroup;
+  dofForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {
-    this.riskForm = this.formBuilder.group({
-      number: [''],
-      riskDefinition: [''],
-      compliance: [''],
-      comment: [''],
-      responsiblePerson: [''],
-      solutionDate: [''],
+    this.dofForm = this.formBuilder.group({
+      topic: [''],
+      activity: [''],
+      hazardSource: [''],
+      risks: [''],
+      detectionImage: [''],
+      legislation: [''],
+      postPrecautionImage: [''],
+      preDofRiskCalculation: this.formBuilder.group({
+        intensity: [''],
+        probability: [''],
+        frequency: [''],
+      }),
+      hazard: [''],
+      recordDate: [''],
+      controlDate: [''],
+      dofDeadline: [''],
+      responsible: [''],
+      performedActivity: [''],
+      requiredPrecautions: [''],
+      currentStatus: [''],
+      postDofRiskCalculation: this.formBuilder.group({
+        intensity: [''],
+        probability: [''],
+        frequency: [''],
+      }),
     });
   }
 
-  onSubmitRisk() {
-    console.log(this.riskForm.value);
+  onSubmitDof() {
+    console.log(this.dofForm.value);
   }
 }

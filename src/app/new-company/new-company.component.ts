@@ -7,23 +7,23 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./new-company.component.scss']
 })
 export class NewCompanyComponent {
-  companyForm: FormGroup;
+  companyInfoForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {
-    this.companyForm = this.formBuilder.group({
-      shortCompanyName: [''],
-      fullCompanyName: [''],
-      address: this.formBuilder.group({
-        street: [''],
-        city: [''],
-        district: [''],
-        zipCode: [''],
-      }),
+    this.companyInfoForm = this.formBuilder.group({
+      companyName: [''],
+      companyTitle: [''],
+      address: [''],
       phone: [''],
+      nace: [''],
+      sectorCode: [''],
+      hazardClass: [''],
+      companyLogo: [''],
+      authorizedPersonName: [''],
     });
   }
 
-  onSubmit() {
-    console.log(this.companyForm.value);
+  onSubmitCompanyInfo() {
+    console.log(this.companyInfoForm.value);
   }
 }

@@ -1,19 +1,37 @@
-<form [formGroup]="reportForm" (ngSubmit)="onSubmitReport()">
+<form [formGroup]="assessmentForm" (ngSubmit)="onSubmitAssessment()">
+  <div>
+    <label for="reportName">Rapor İsmi</label>
+    <input id="reportName" formControlName="reportName" type="text">
+  </div>
+  <div>
+    <label for="reportDate">Rapor Tarihi</label>
+    <input id="reportDate" formControlName="reportDate" type="date">
+  </div>
+  <div>
+    <label for="reportValidityDate">Rapor Geçerlilik Tarihi</label>
+    <input id="reportValidityDate" formControlName="reportValidityDate" type="date">
+  </div>
+  <div>
+    <label for="riskAssessmentMethod">Risk Değerlendirme Metodu</label>
+    <input id="riskAssessmentMethod" formControlName="riskAssessmentMethod" type="text">
+  </div>
+  <div formGroupName="riskAssessmentTeam">
     <div>
-      <label for="reportName">Rapor İsmi</label>
-      <input id="reportName" formControlName="reportName" type="text">
+      <label for="firstName">Ad</label>
+      <input id="firstName" formControlName="firstName" type="text">
     </div>
     <div>
-      <label for="date">Tarih</label>
-      <input id="date" formControlName="date" type="date">
+      <label for="lastName">Soyad</label>
+      <input id="lastName" formControlName="lastName" type="text">
     </div>
     <div>
-      <label for="revisionNumber">Revize No</label>
-      <input id="revisionNumber" formControlName="revisionNumber" type="number">
+      <label for="title">Ünvan</label>
+      <input id="title" formControlName="title" type="text">
     </div>
-    <div>
-      <label for="note">Not</label>
-      <textarea id="note" formControlName="note" rows="4" cols="50"></textarea>
-    </div>
-    <button type="submit">Rapor Ekle</button>
-  </form>
+  </div>
+  <div>
+    <label for="workplaceSection">İş Yeri Bölümü/Birimi</label>
+    <input id="workplaceSection" formControlName="workplaceSection" type="text">
+  </div>
+  <button type="submit">Rapor Ekle</button>
+</form>

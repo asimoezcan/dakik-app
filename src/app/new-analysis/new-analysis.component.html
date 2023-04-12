@@ -1,31 +1,84 @@
-<form [formGroup]="riskForm" (ngSubmit)="onSubmitRisk()">
+<form [formGroup]="dofForm" (ngSubmit)="onSubmitDof()">
+  <div>
+    <label for="topic">Konu</label>
+    <input id="topic" formControlName="topic" type="text">
+  </div>
+  <div>
+    <label for="activity">Faaliyet</label>
+    <input id="activity" formControlName="activity" type="text">
+  </div>
+  <div>
+    <label for="hazardSource">Tehlike Kaynağı</label>
+    <input id="hazardSource" formControlName="hazardSource" type="text">
+  </div>
+  <div>
+    <label for="risks">Riskler</label>
+    <input id="risks" formControlName="risks" type="text">
+  </div>
+  <div>
+    <label for="detectionImage">Tespit Resmi / Örnek Resim</label>
+    <input id="detectionImage" formControlName="detectionImage" type="file">
+  </div>
+  <div>
+    <label for="legislation">Mevzuat</label>
+    <input id="legislation" formControlName="legislation" type="text">
+  </div>
+  <div>
+    <label for="postPrecautionImage">Önlem Sonrası Resim / Örnek Resim</label>
+    <input id="postPrecautionImage" formControlName="postPrecautionImage" type="file">
+  </div>
+  <div formGroupName="preDofRiskCalculation">
+    <label for="intensity">Şiddet</label>
+    <input id="intensity" formControlName="intensity" type="number">
+    <label for="probability">Olasılık</label>
+    <input id="probability" formControlName="probability" type="number">
+    <label for="frequency">Frekans</label>
+    <input id="frequency" formControlName="frequency" type="number">
+  </div>
+  <div>
+    <label for="hazard">Tehlike</label>
+    <input id="hazard" formControlName="hazard" type="text">
+  </div>
+  <div>
+    <label for="recordDate">Kayıt Tarihi</label>
+    <input id="recordDate" formControlName="recordDate" type="date">
+  </div>
+  <div>
+    <label for="controlDate">Kontrol Tarihi</label>
+    <input id="controlDate" formControlName="controlDate" type="date">
+  </div>
+  <div>
+    <label for="dofDeadline">DÖF Termin Tarihi</label>
+    <input id="dofDeadline" formControlName="dofDeadline" type="date">
+  </div>
+  <div>
+    <label for="responsible">Sorumlu/-lar</label>
+    <input id="responsible" formControlName="responsible" type="text">
+  </div>
+  <div>
+    <label for="performedActivity">Yapılan Faaliyet</label>
+    <input id="performedActivity" formControlName="performedActivity" type="text">
+  </div>
+
     <div>
-      <label for="number">No</label>
-      <input id="number" formControlName="number" type="number">
+      <label for="requiredPrecautions">Alınması Gereken Önlemler</label>
+      <input id="requiredPrecautions" formControlName="requiredPrecautions" type="text">
     </div>
     <div>
-      <label for="riskDefinition">Risk Tanımı</label>
-      <input id="riskDefinition" formControlName="riskDefinition" type="text">
+      <label for="currentStatus">Mevcut Durum</label>
+      <input id="currentStatus" formControlName="currentStatus" type="text">
     </div>
+
+    <div formGroupName="postDofRiskCalculation">
+      <label for="postIntensity">Şiddet</label>
+      <input id="postIntensity" formControlName="intensity" type="number">
+      <label for="postProbability">Olasılık</label>
+      <input id="postProbability" formControlName="probability" type="number">
+      <label for="postFrequency">Frekans</label>
+      <input id="postFrequency" formControlName="frequency" type="number">
+    </div>
+
     <div>
-      <label for="compliance">Uygunluk</label>
-      <select id="compliance" formControlName="compliance">
-        <option value="">Seçiniz</option>
-        <option value="evet">Evet</option>
-        <option value="hayır">Hayır</option>
-      </select>
+      <button type="submit">Formu Gönder</button>
     </div>
-    <div>
-      <label for="comment">Yorum</label>
-      <textarea id="comment" formControlName="comment" rows="4" cols="50"></textarea>
-    </div>
-    <div>
-      <label for="responsiblePerson">Sorumlu Kişi</label>
-      <input id="responsiblePerson" formControlName="responsiblePerson" type="text">
-    </div>
-    <div>
-      <label for="solutionDate">Çözüm Tarihi</label>
-      <input id="solutionDate" formControlName="solutionDate" type="date">
-    </div>
-    <button type="submit">Risk Ekle</button>
   </form>

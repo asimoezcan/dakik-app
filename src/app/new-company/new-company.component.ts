@@ -23,6 +23,16 @@ export class NewCompanyComponent {
     });
   }
 
+  onSubmit() {
+    // Form verilerini JSON'a dönüştürün
+    const formData = JSON.stringify(this.companyInfoForm.value);
+
+    // JSON verilerini kaydedin (localStorage veya bir API kullanarak)
+    localStorage.setItem('formData', formData);
+
+    // Başka bir bileşende listelemek için veriyi paylaşabileceğiniz bir hizmet oluşturun.
+  }
+
   onSubmitCompanyInfo() {
     console.log(this.companyInfoForm.value);
   }

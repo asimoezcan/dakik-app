@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-new-company',
@@ -9,7 +11,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class NewCompanyComponent {
   companyInfoForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder,private httpClient: HttpClient) {
     this.companyInfoForm = this.formBuilder.group({
       companyName: [''],
       companyTitle: [''],
@@ -23,17 +25,17 @@ export class NewCompanyComponent {
     });
   }
 
-  onSubmit() {
-    // Form verilerini JSON'a dönüştürün
-    const formData = JSON.stringify(this.companyInfoForm.value);
-
-    // JSON verilerini kaydedin (localStorage veya bir API kullanarak)
-    localStorage.setItem('formData', formData);
-
-    // Başka bir bileşende listelemek için veriyi paylaşabileceğiniz bir hizmet oluşturun.
-  }
-
   onSubmitCompanyInfo() {
     console.log(this.companyInfoForm.value);
+
+    // Yerel JSON dosyasına veri göndermek için HTTP POST isteği
+    this.httpClient.post('http://localhost:3000/companies', this.companyInfoForm.value).subscribe(
+        (response) => {
+          console.log('POST isteği başarılı', response);
+        },
+        (error) => {
+          console.log('POST isteği başarısız', error);
+        }
+      );
   }
 }

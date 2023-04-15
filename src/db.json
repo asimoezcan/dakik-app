@@ -90,5 +90,19 @@
       "password": "dfgfdgfgd",
       "id": 18
     }
+  ],
+  "companies": [
+    {
+      "companyName": "wefweffdsfdssfdsf",
+      "companyTitle": "sdfdsf",
+      "address": "",
+      "phone": "",
+      "nace": "",
+      "sectorCode": "",
+      "hazardClass": "",
+      "companyLogo": "",
+      "authorizedPersonName": "",
+      "id": 1
+    }
   ]
 }

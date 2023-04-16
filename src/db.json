@@ -103,6 +103,18 @@
       "companyLogo": "",
       "authorizedPersonName": "",
       "id": 1
+    },
+    {
+      "companyName": "Frekans",
+      "companyTitle": "Frekans İş Sağlığı Ve Güvenliği Tic. Ltd. Şti.",
+      "address": "Sahil Bulvarı 191/18 Aydıntepe Mah. Tuzla/İstanbul 34944",
+      "phone": "0216 393 4004",
+      "nace": "3456",
+      "sectorCode": "21 8761 186712 81631 21",
+      "hazardClass": "Çok Tehlikeli",
+      "companyLogo": "",
+      "authorizedPersonName": "Asım Özcan",
+      "id": 2
     }
   ]
 }

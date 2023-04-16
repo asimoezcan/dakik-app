@@ -1,0 +1,26 @@
+<table>
+    <tr>
+      <th>ID</th>
+      <th>Company Name</th>
+      <th>Company Title</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>NACE</th>
+      <th>Sector Code</th>
+      <th>Hazard Class</th>
+      <th>Company Logo</th>
+      <th>Authorized Person Name</th>
+    </tr>
+    <tr *ngFor="let company of companies">
+      <td>{{ company.id }}</td>
+      <td>{{ company.companyName }}</td>
+      <td>{{ company.companyTitle }}</td>
+      <td>{{ company.address }}</td>
+      <td>{{ company.phone }}</td>
+      <td>{{ company.nace }}</td>
+      <td>{{ company.sectorCode }}</td>
+      <td>{{ company.hazardClass }}</td>
+      <td>{{ company.companyLogo }}</td>
+      <td>{{ company.authorizedPersonName }}</td>
+    </tr>
+  </table>

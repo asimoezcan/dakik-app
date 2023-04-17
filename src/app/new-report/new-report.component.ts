@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-new-report',
@@ -9,7 +11,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class NewReportComponent {
   assessmentForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder,private httpClient: HttpClient) {
     this.assessmentForm = this.formBuilder.group({
       reportName: [''],
       reportDate: [''],
@@ -26,5 +28,15 @@ export class NewReportComponent {
 
   onSubmitAssessment() {
     console.log(this.assessmentForm.value);
+
+    // Yerel JSON dosyasına veri göndermek için HTTP POST isteği
+    this.httpClient.post('http://localhost:3000/assessments', this.assessmentForm.value).subscribe(
+        (response) => {
+          console.log('POST isteği başarılı', response);
+        },
+        (error) => {
+          console.log('POST isteği başarısız', error);
+        }
+      );
   }
 }

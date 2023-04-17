@@ -33,20 +33,20 @@
     <label for="postPrecautionImage" class="font-bold text-gray-700">Önlem Sonrası Resim / Örnek Resim</label>
     <input id="postPrecautionImage" formControlName="postPrecautionImage" type="file" class="w-full">
   </div>
-  <div>
+  <div formGroupName="preDofRiskCalculation">
     <label for="preDofRiskCalculation" class="font-bold text-gray-700">Risk Hesaplama</label>
     <div class="flex space-x-4">
       <div class="w-1/3">
         <label for="intensity" class="block mb-2 font-bold text-gray-700">Şiddet</label>
-        <input id="intensity" formControlName="preDofRiskCalculation.intensity" type="number" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+        <input id="intensity" formControlName="preintensity" type="number" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
       </div>
       <div class="w-1/3">
         <label for="probability" class="block mb-2 font-bold text-gray-700">Olasılık</label>
-        <input id="probability" formControlName="preDofRiskCalculation.probability" type="number" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+        <input id="probability" formControlName="preprobability" type="number" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
       </div>
       <div class="w-1/3">
         <label for="frequency" class="block mb-2 font-bold text-gray-700">Frekans</label>
-        <input id="frequency" formControlName="preDofRiskCalculation.frequency" type="number" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+        <input id="frequency" formControlName="prefrequency" type="number" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
       </div>
     </div>
   </div>
@@ -96,15 +96,15 @@
       <div class="flex space-x-4">
         <div class="w-1/3">
           <label for="postIntensity" class="block mb-2 font-bold text-gray-700">Şiddet</label>
-          <input id="postIntensity" formControlName="intensity" type="number" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+          <input id="postIntensity" formControlName="postintensity" type="number" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
         </div>
         <div class="w-1/3">
           <label for="postProbability" class="block mb-2 font-bold text-gray-700">Olasılık</label>
-          <input id="postProbability" formControlName="probability" type="number" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+          <input id="postProbability" formControlName="postprobability" type="number" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
         </div>
         <div class="w-1/3">
           <label for="postFrequency" class="block mb-2 font-bold text-gray-700">Frekans</label>
-          <input id="postFrequency" formControlName="frequency" type="number" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+          <input id="postFrequency" formControlName="postfrequency" type="number" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
         </div>
       </div>
     </div>

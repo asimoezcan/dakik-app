@@ -25,6 +25,7 @@ export class NewCompanyComponent {
     });
   }
 
+  
   onSubmitCompanyInfo() {
     console.log(this.companyInfoForm.value);
 

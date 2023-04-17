@@ -1,26 +1,44 @@
-<table>
-    <tr>
-      <th>ID</th>
-      <th>Company Name</th>
-      <th>Company Title</th>
-      <th>Address</th>
-      <th>Phone</th>
-      <th>NACE</th>
-      <th>Sector Code</th>
-      <th>Hazard Class</th>
-      <th>Company Logo</th>
-      <th>Authorized Person Name</th>
-    </tr>
-    <tr *ngFor="let company of companies">
-      <td>{{ company.id }}</td>
-      <td>{{ company.companyName }}</td>
-      <td>{{ company.companyTitle }}</td>
-      <td>{{ company.address }}</td>
-      <td>{{ company.phone }}</td>
-      <td>{{ company.nace }}</td>
-      <td>{{ company.sectorCode }}</td>
-      <td>{{ company.hazardClass }}</td>
-      <td>{{ company.companyLogo }}</td>
-      <td>{{ company.authorizedPersonName }}</td>
-    </tr>
-  </table>
+<div class="container mx-auto">
+  <div class="flex flex-col">
+    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+        <div class="overflow-hidden">
+          <table class="min-w-full text-left text-sm font-light">
+            <thead class="border-b font-medium dark:border-neutral-500">
+              <tr>
+                <th>ID</th>
+                <th>Şirket Adı</th>
+                <th>Şirket Ünvanı</th>
+                <th>Adres</th>
+                <th>Telefon</th>
+                <th>NACE</th>
+                <th>iş Kolu</th>
+                <th>Tehlike Sınıfı</th>
+                <th>Logo</th>
+                <th>Sorumlu Kişi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let company of companies">
+                <td>{{ company.id }}</td>
+                <td>{{ company.companyName }}</td>
+                <td>{{ company.companyTitle }}</td>
+                <td>{{ company.address }}</td>
+                <td>{{ company.phone }}</td>
+                <td>{{ company.nace }}</td>
+                <td>{{ company.sectorCode }}</td>
+                <td>{{ company.hazardClass }}</td>
+                <td>{{ company.companyLogo }}</td>
+                <td>{{ company.authorizedPersonName }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button routerLink="/newcompany" class="border rounded">
+    Yeni Şirket Ekle
+  </button>
+</div>

@@ -1,1 +1,41 @@
-<p>reports works!</p>
+<div class="container mx-auto">
+
+  <div class="flex flex-col">
+    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+        <div class="overflow-hidden">
+          <table class="min-w-full text-left text-sm font-light">
+            <thead class="border-b font-medium dark:border-neutral-500">
+              <tr>
+                <th>ID</th>
+                <th>Rapor Adı</th>
+                <th>Rapor Tarihi</th>
+                <th>Rapor Geçerlilik Tarihi</th>
+                <th>Risk Değerlendirme Metodu</th>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Şirket Ünvanı</th>
+                <th>İş Yeri Bölümü/Birimi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let assessment of assessments">
+                <td>{{ assessment.id }}</td>
+                <td>{{ assessment.reportName }}</td>
+                <td>{{ assessment.reportDate }}</td>
+                <td>{{ assessment.reportValidityDate }}</td>
+                <td>{{ assessment.riskAssessmentMethod }}</td>
+                <td>{{ assessment.riskAssessmentTeam.firstName }}</td>
+                <td>{{ assessment.riskAssessmentTeam.lastName }}</td>
+                <td>{{ assessment.riskAssessmentTeam.title }}</td>
+                <td>{{ assessment.workplaceSection }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button routerLink="/newreport" class="border rounded">Yeni Rapor Ekle</button>
+  
+</div>

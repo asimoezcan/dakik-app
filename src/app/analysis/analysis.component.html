@@ -1,1 +1,69 @@
-<p>analysis works!</p>
+<div class="container mx-auto">
+  <div class="flex flex-col">
+    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+        <div class="overflow-hidden">
+          <table class="min-w-full text-left text-sm font-light">
+            <thead class="border-b font-medium dark:border-neutral-500">
+              <tr>
+                <th>Konu</th>
+                <th>Faaliyet</th>
+                <th>Tehlike Kaynağı</th>
+                <th>Riskler</th>
+                <th>Tespit Resmi / Örnek Resim</th>
+                <th>Mevzuat</th>
+                <th>Önlem Sonrası Resim / Örnek Resim</th>
+                <th>Risk Hesaplama</th>
+                <th>Şiddet</th>
+                <th>Olasılık</th>
+                <th>Frekans</th>
+                <th>Tehlike</th>
+                <th>Kayıt Tarihi</th>
+                <th>Kontrol Tarihi</th>
+                <th>DÖF Termin Tarihi</th>
+                <th>Sorumlu/-lar</th>
+                <th>Yapılan Faaliyet</th>
+                <th>Alınması Gereken Önlemler</th>
+                <th>Mevcut Durum</th>
+                <th>Risk Hesaplama (DÖF Sonrası)</th>
+                <th>Şiddet</th>
+                <th>Olasılık</th>
+                <th>Frekans</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let analysis of analysis">
+                <td>{{ analysis.topic }}</td>
+                <td>{{ analysis.activity }}</td>
+                <td>{{ analysis.hazardSource }}</td>
+                <td>{{ analysis.risks }}</td>
+                <td>{{ analysis.detectionImage }}</td>
+                <td>{{ analysis.legislation }}</td>
+                <td>{{ analysis.postPrecautionImage }}</td>
+                <td>{{ analysis.preDofRiskCalculation }}</td>
+                <td>{{ analysis.preDofRiskCalculation.preintensity }}</td>
+                <td>{{ analysis.preDofRiskCalculation.preprobability }}</td>
+                <td>{{ analysis.preDofRiskCalculation.prefrequency }}</td>
+                <td>{{ analysis.hazard }}</td>
+                <td>{{ analysis.recordDate }}</td>
+                <td>{{ analysis.controlDate }}</td>
+                <td>{{ analysis.dofDeadline }}</td>
+                <td>{{ analysis.responsible }}</td>
+                <td>{{ analysis.performedActivity }}</td>
+                <td>{{ analysis.requiredPrecautions }}</td>
+                <td>{{ analysis.currentStatus }}</td>
+                <td>{{ analysis.postDofRiskCalculation }}</td>
+                <td>{{ analysis.postDofRiskCalculation.postintensity }}</td>
+                <td>{{ analysis.postDofRiskCalculation.postprobability }}</td>
+                <td>{{ analysis.postDofRiskCalculation.postfrequency }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button routerLink="/newanalysis" class="border rounded">
+    Yeni Risk Ekle
+  </button>
+</div>

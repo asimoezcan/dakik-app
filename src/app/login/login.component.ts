@@ -34,7 +34,7 @@ export class LoginComponent {
     });
   
     // GET isteğini yapın ve başlıkları gönderin
-    this.http.get('http://localhost:3000/user/login', { headers, observe: 'response' }).subscribe(
+    this.http.get('http://localhost:3080/user/login', { headers, observe: 'response' }).subscribe(
       (response: HttpResponse<any>) => {
         if (response.status === 200) {
           console.log('API cevabı:', response.body);

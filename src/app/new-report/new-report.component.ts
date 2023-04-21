@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
 export class NewReportComponent {
   assessmentForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder,private httpClient: HttpClient) {
+  constructor(private formBuilder: FormBuilder,private httpClient: HttpClient,private router: Router) {
     this.assessmentForm = this.formBuilder.group({
       reportName: [''],
       reportDate: [''],
@@ -33,6 +34,7 @@ export class NewReportComponent {
     this.httpClient.post('http://localhost:3000/assessments', this.assessmentForm.value).subscribe(
         (response) => {
           console.log('POST isteği başarılı', response);
+          this.router.navigate(['/reports']);
         },
         (error) => {
           console.log('POST isteği başarısız', error);

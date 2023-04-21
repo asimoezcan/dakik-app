@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-analysis',
@@ -10,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 export class NewAnalysisComponent {
   dofForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder,private httpClient: HttpClient) {
+  constructor(private formBuilder: FormBuilder,private httpClient: HttpClient,private router: Router) {
     this.dofForm = this.formBuilder.group({
       topic: [''],
       activity: [''],
@@ -47,6 +48,7 @@ export class NewAnalysisComponent {
     this.httpClient.post('http://localhost:3000/analysis', this.dofForm.value).subscribe(
         (response) => {
           console.log('POST isteği başarılı', response);
+          this.router.navigate(['/analysis']);
         },
         (error) => {
           console.log('POST isteği başarısız', error);

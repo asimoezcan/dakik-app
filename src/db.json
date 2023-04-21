@@ -24,6 +24,42 @@
       "companyLogo": "",
       "authorizedPersonName": "",
       "id": 2
+    },
+    {
+      "companyName": "",
+      "companyTitle": "",
+      "address": "",
+      "phone": "",
+      "nace": "",
+      "sectorCode": "",
+      "hazardClass": "",
+      "companyLogo": "",
+      "authorizedPersonName": "",
+      "id": 3
+    },
+    {
+      "companyName": "",
+      "companyTitle": "",
+      "address": "",
+      "phone": "",
+      "nace": "",
+      "sectorCode": "",
+      "hazardClass": "",
+      "companyLogo": "",
+      "authorizedPersonName": "",
+      "id": 4
+    },
+    {
+      "companyName": "",
+      "companyTitle": "",
+      "address": "",
+      "phone": "",
+      "nace": "",
+      "sectorCode": "",
+      "hazardClass": "",
+      "companyLogo": "",
+      "authorizedPersonName": "",
+      "id": 5
     }
   ],
   "assessments": [
@@ -52,6 +88,19 @@
       },
       "workplaceSection": "",
       "id": 2
+    },
+    {
+      "reportName": "",
+      "reportDate": "",
+      "reportValidityDate": "",
+      "riskAssessmentMethod": "",
+      "riskAssessmentTeam": {
+        "firstName": "",
+        "lastName": "",
+        "title": ""
+      },
+      "workplaceSection": "",
+      "id": 3
     }
   ],
   "analysis": [
@@ -82,6 +131,34 @@
         "postfrequency": 32
       },
       "id": 1
+    },
+    {
+      "topic": "",
+      "activity": "",
+      "hazardSource": "",
+      "risks": "",
+      "detectionImage": "",
+      "legislation": "",
+      "postPrecautionImage": "",
+      "preDofRiskCalculation": {
+        "preintensity": "",
+        "preprobability": "",
+        "prefrequency": ""
+      },
+      "hazard": "",
+      "recordDate": "",
+      "controlDate": "",
+      "dofDeadline": "",
+      "responsible": "",
+      "performedActivity": "",
+      "requiredPrecautions": "",
+      "currentStatus": "",
+      "postDofRiskCalculation": {
+        "postintensity": "",
+        "postprobability": "",
+        "postfrequency": ""
+      },
+      "id": 2
     }
   ]
 }

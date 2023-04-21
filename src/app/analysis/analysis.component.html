@@ -56,6 +56,7 @@
                 <td>{{ analysis.postDofRiskCalculation.postintensity }}</td>
                 <td>{{ analysis.postDofRiskCalculation.postprobability }}</td>
                 <td>{{ analysis.postDofRiskCalculation.postfrequency }}</td>
+                <button (click)="removeItem(analysis.id)">Sil</button>
               </tr>
             </tbody>
           </table>

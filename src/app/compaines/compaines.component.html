@@ -30,6 +30,7 @@
                 <td>{{ company.hazardClass }}</td>
                 <td>{{ company.companyLogo }}</td>
                 <td>{{ company.authorizedPersonName }}</td>
+                <button (click)="removeItem(company.id)">Sil</button>
               </tr>
             </tbody>
           </table>

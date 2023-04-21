@@ -12,6 +12,18 @@
       "companyLogo": "C:\\fakepath\\2016-04-30 14_55_51-sonar marine.png",
       "authorizedPersonName": "Asım Özcan",
       "id": 1
+    },
+    {
+      "companyName": "ererf",
+      "companyTitle": "",
+      "address": "",
+      "phone": "",
+      "nace": "",
+      "sectorCode": "",
+      "hazardClass": "",
+      "companyLogo": "",
+      "authorizedPersonName": "",
+      "id": 2
     }
   ],
   "assessments": [

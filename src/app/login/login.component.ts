@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient, HttpResponse, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -13,13 +13,12 @@ export class LoginComponent {
 
   constructor(private formBuilder: FormBuilder, private http: HttpClient,private router: Router) {
     this.loginForm = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+      email: ['', [Validators.required]],
+      password: ['', [Validators.required]],
     });
   }
 
-  ngOnInit(): void {
-  }
+
 
   onSubmit() {
     if (this.loginForm.invalid) {
@@ -31,8 +30,7 @@ export class LoginComponent {
   
     // Kullanıcı adı ve şifreyi başlıklara ekleyin
     const headers = new HttpHeaders({
-      'username': email,
-      'password': password
+      'Authorization': 'Basic ' + btoa(email + ':' + password)
     });
   
     // GET isteğini yapın ve başlıkları gönderin

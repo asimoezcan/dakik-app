@@ -1,0 +1,117 @@
+<form [formGroup]="dofForm" (ngSubmit)="onUpdateAssessment()" class="max-w-md mx-auto shadow-md rounded-md p-6 bg-white space-y-4">
+    <div>
+      <label for="topic" class="font-bold text-gray-700">Konu</label>
+      <input id="topic" formControlName="topic" type="text" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+    </div>
+  
+    <div>
+      <label for="activity" class="font-bold text-gray-700">Faaliyet</label>
+      <input id="activity" formControlName="activity" type="text" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+    </div>
+  
+    <div>
+      <label for="hazardSource" class="font-bold text-gray-700">Tehlike Kaynağı</label>
+      <input id="hazardSource" formControlName="hazardSource" type="text" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+    </div>
+  
+    <div>
+      <label for="risks" class="font-bold text-gray-700">Riskler</label>
+      <input id="risks" formControlName="risks" type="text" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+    </div>
+  
+    <div>
+      <label for="detectionImage" class="font-bold text-gray-700">Tespit Resmi / Örnek Resim</label>
+      <input id="detectionImage" formControlName="detectionImage" type="file" class="w-full">
+    </div>
+  
+    <div>
+      <label for="legislation" class="font-bold text-gray-700">Mevzuat</label>
+      <input id="legislation" formControlName="legislation" type="text" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+    </div>
+  
+    <div>
+      <label for="postPrecautionImage" class="font-bold text-gray-700">Önlem Sonrası Resim / Örnek Resim</label>
+      <input id="postPrecautionImage" formControlName="postPrecautionImage" type="file" class="w-full">
+    </div>
+    <div formGroupName="preDofRiskCalculation">
+      <label for="preDofRiskCalculation" class="font-bold text-gray-700">Risk Hesaplama</label>
+      <div class="flex space-x-4">
+        <div class="w-1/3">
+          <label for="intensity" class="block mb-2 font-bold text-gray-700">Şiddet</label>
+          <input id="intensity" formControlName="preintensity" type="number" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+        </div>
+        <div class="w-1/3">
+          <label for="probability" class="block mb-2 font-bold text-gray-700">Olasılık</label>
+          <input id="probability" formControlName="preprobability" type="number" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+        </div>
+        <div class="w-1/3">
+          <label for="frequency" class="block mb-2 font-bold text-gray-700">Frekans</label>
+          <input id="frequency" formControlName="prefrequency" type="number" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+        </div>
+      </div>
+    </div>
+  
+    <div>
+      <label for="hazard" class="font-bold text-gray-700">Tehlike</label>
+      <input id="hazard" formControlName="hazard" type="text" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+    </div>
+  
+    <div>
+      <label for="recordDate" class="font-bold text-gray-700">Kayıt Tarihi</label>
+      <input id="recordDate" formControlName="recordDate" type="date" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+    </div>
+  
+    <div>
+      <label for="controlDate" class="font-bold text-gray-700">Kontrol Tarihi</label>
+      <input id="controlDate" formControlName="controlDate" type="date" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+    </div>
+  
+      <div>
+        <label for="dofDeadline" class="font-bold text-gray-700">DÖF Termin Tarihi</label>
+        <input id="dofDeadline" formControlName="dofDeadline" type="date" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+      </div>
+    
+      <div>
+        <label for="responsible" class="font-bold text-gray-700">Sorumlu/-lar</label>
+        <input id="responsible" formControlName="responsible" type="text" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+      </div>
+    
+      <div>
+        <label for="performedActivity" class="font-bold text-gray-700">Yapılan Faaliyet</label>
+        <input id="performedActivity" formControlName="performedActivity" type="text" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+      </div>
+    
+      <div>
+        <label for="requiredPrecautions" class="font-bold text-gray-700">Alınması Gereken Önlemler</label>
+        <input id="requiredPrecautions" formControlName="requiredPrecautions" type="text" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+      </div>
+    
+      <div>
+        <label for="currentStatus" class="font-bold text-gray-700">Mevcut Durum</label>
+        <input id="currentStatus" formControlName="currentStatus" type="text" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+      </div>
+   
+      <div formGroupName="postDofRiskCalculation">
+        <label class="font-bold text-gray-700">Risk Hesaplama (DÖF Sonrası)</label>
+        <div class="flex space-x-4">
+          <div class="w-1/3">
+            <label for="postIntensity" class="block mb-2 font-bold text-gray-700">Şiddet</label>
+            <input id="postIntensity" formControlName="postintensity" type="number" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+          </div>
+          <div class="w-1/3">
+            <label for="postProbability" class="block mb-2 font-bold text-gray-700">Olasılık</label>
+            <input id="postProbability" formControlName="postprobability" type="number" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+          </div>
+          <div class="w-1/3">
+            <label for="postFrequency" class="block mb-2 font-bold text-gray-700">Frekans</label>
+            <input id="postFrequency" formControlName="postfrequency" type="number" class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300">
+          </div>
+        </div>
+      </div>
+    
+      <div>
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Güncelle
+        </button>
+      </div>
+    </form>

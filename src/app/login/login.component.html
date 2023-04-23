@@ -1,40 +1,80 @@
-<div class="container" class="min-h-screen flex items-center justify-center;">
-  <form
-    [formGroup]="loginForm"
-    (ngSubmit)="onSubmit()"
-    class="max-w-sm mx-auto shadow-md rounded-md p-6 bg-white"
-  >
-    <div class="mb-4">
-      <label for="email" class="block mb-2 font-bold text-gray-700"
-        >E-posta:</label
-      >
-      <input
-        id="email"
-        type="email"
-        formControlName="email"
-        required
-        class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-emerald-300 focus:border-emerald-300"
-      />
+<div
+  class="bg-emerald-900 absolute top-0 left-0 bg-gradient-to-t from-emerald-300 to-emerald-700 bottom-0 leading-5 h-full w-full overflow-hidden"
+></div>
+<div
+  class="relative min-h-screen sm:flex sm:flex-row justify-center bg-transparent rounded-3xl shadow-xl"
+>
+  <div class="flex-col flex self-center lg:px-14 sm:max-w-4xl xl:max-w-md z-10">
+    <div class="self-start hidden lg:flex flex-col text-gray-300">
+      <h1 class="my-3 font-semibold text-4xl text-gray-900">Dakik-App</h1>
+      <p class="pr-3 text-sm text-gray-800 ">
+        Lorem ipsum is placeholder text commonly used in the graphic, print, and
+        publishing industries for previewing layouts and visual mockups
+      </p>
     </div>
+  </div>
 
-    <div class="mb-6">
-      <label for="password" class="block mb-2 font-bold text-gray-700"
-        >Şifre:</label
-      >
-      <input
-        id="password"
-        type="password"
-        formControlName="password"
-        required
-        class="w-full px-3 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-emerald-300 focus:border-emerald-300"
-      />
+  <div class="flex justify-center self-center z-10">
+    <div class="p-12 bg-white mx-auto rounded-3xl w-96">
+      <div class="mb-7">
+        <h3 class="font-semibold text-2xl my-3 text-gray-800">Giriş Yap</h3>
+        <p class="text-gray-400">
+          Hesabın yok mu ?
+          <a href="#" class="text-sm text-emerald-500 hover:text-emerald-700"
+            >Kayıt ol</a
+          >
+        </p>
+      </div>
+      <!--Login Form-->
+      <div class="">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            
+            <div class="my-3" >
+              <input
+              id="email"
+              type="email"
+              formControlName="email"
+              required
+              class="w-full text-sm px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:border-emerald-400"
+              placeholder="Email"
+            />
+          </div>
+          <div class="my-3 " >
+            <input
+            id="password"
+            type="password"
+            formControlName="password"
+            required
+            class="w-full text-sm px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:border-emerald-400"
+            placeholder="Şifre"
+            />
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <div class="text-sm ml-auto my-3">
+              <a href="#" class="text-emerald-700 hover:text-emerald-600">
+                Şifreni mi unuttun ?
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <button
+              type="submit"
+              class="w-full flex justify-center bg-emerald-800 hover:bg-emerald-700 text-gray-100 p-3 rounded-lg tracking-wide font-semibold cursor-pointer transition ease-in duration-500"
+              >
+              Giriş Yap
+            </button>
+          </div>
+
+        </form>
+      </div>
+      
+      <!-- Copyright-->
+      <div class="mt-7 text-center text-gray-300 text-xs">
+        <p>Copyright Dakik-app © 2023</p>
+      </div>
+      <!--          -->
     </div>
-
-    <button
-      type="submit"
-      class="w-full bg-emerald-500 text-white p-3 rounded-md hover:bg-emerald-600 focus:outline-none focus:bg-emerald-600"
-    >
-      Giriş Yap
-    </button>
-  </form>
+  </div>
 </div>

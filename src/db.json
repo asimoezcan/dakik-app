@@ -1,6 +1,20 @@
 {
   "users": [],
   "companies": [],
-  "assessments": [],
+  "assessments": [
+    {
+      "reportName": "Patlamadan Koruma Analizi",
+      "reportDate": "",
+      "reportValidityDate": "",
+      "riskAssessmentMethod": "",
+      "riskAssessmentTeam": {
+        "firstName": "",
+        "lastName": "",
+        "title": ""
+      },
+      "workplaceSection": "",
+      "id": 1
+    }
+  ],
   "analysis": []
 }

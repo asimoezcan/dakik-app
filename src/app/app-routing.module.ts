@@ -8,6 +8,7 @@ import { NewReportComponent } from './new-report/new-report.component';
 import { CompainesComponent } from './compaines/compaines.component';
 import { AnalysisComponent } from './analysis/analysis.component';
 import { ReportsComponent } from './reports/reports.component';
+import { EditReportComponent } from './edit-report/edit-report.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'companies', component: CompainesComponent },
   { path: 'analysis', component: AnalysisComponent },
   { path: 'reports', component: ReportsComponent },
-  { path: 'dashboard', component: DashboardComponent }
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'edit-report/:id', component: EditReportComponent },
 ];
 
 @NgModule({

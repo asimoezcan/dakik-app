@@ -1,6 +1,20 @@
 {
   "users": [],
   "companies": [],
-  "assessments": [],
+  "assessments": [
+    {
+      "reportName": "asdsad",
+      "reportDate": "",
+      "reportValidityDate": "",
+      "riskAssessmentMethod": "sdfffds",
+      "riskAssessmentTeam": {
+        "firstName": "",
+        "lastName": "",
+        "title": ""
+      },
+      "workplaceSection": "Kütüphane",
+      "id": 1
+    }
+  ],
   "analysis": []
 }

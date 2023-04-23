@@ -29,6 +29,8 @@
                 <td>{{ assessment.riskAssessmentTeam.lastName }}</td>
                 <td>{{ assessment.riskAssessmentTeam.title }}</td>
                 <td>{{ assessment.workplaceSection }}</td>
+                <button (click)="editReport(assessment.id)">Düzenle</button>
+
                 <button (click)="removeItem(assessment.id)">Sil</button>
               </tr>
             </tbody>

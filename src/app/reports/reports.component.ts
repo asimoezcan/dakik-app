@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reports',
@@ -9,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class ReportsComponent implements OnInit {
   assessments = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
     this.fetchAssessments();
@@ -29,5 +30,7 @@ export class ReportsComponent implements OnInit {
   deleteAssessment(itemId: number): void {
     this.http.delete(`http://localhost:3000/assessments/${itemId}`).subscribe();
   }
-  
+  editReport(itemId: number): void {
+    this.router.navigate(['/edit-report', itemId]);
+  }
 }

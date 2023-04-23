@@ -1,17 +1,43 @@
-<div class="container">
-  <div class="">
-
-
-      <button class=" bg-white border border-gray-200 rounded shadow">
+<div class="container mx-auto px-4 h-screen flex items-center justify-center" >
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 w-full ">
+    <div class="item">
+      <button class="w-full bg-white border border-gray-200 rounded shadow transition-all duration-300 hover:shadow-lg hover:bg-gray-50" routerLink="/companies">
         <div class="flex flex-col items-center p-8">
           <img class="w-24 h-24" src="../../assets/company.svg" alt="Companies-logo"/>
-
           <h5 class="mb-1 text-xl font-medium text-emerald-900">
             Companies
           </h5>
-
         </div>
       </button>
-
+    </div>    
+    <div class="item">
+      <button class="w-full bg-white border border-gray-200 rounded shadow transition-all duration-300 hover:shadow-lg hover:bg-gray-50  "routerLink="/reports">
+      <div class="flex flex-col items-center p-8">
+          <img class="w-24 h-24" src="../../assets/assessment.svg" alt="Assessment-logo"/>
+          <h5 class="mb-1 text-xl font-medium text-emerald-900">
+            Assessments
+          </h5>
+        </div>
+      </button>
+    </div>    <div class="item">
+      <button class="w-full bg-white border border-gray-200 rounded shadow transition-all duration-300 hover:shadow-lg hover:bg-gray-50" routerLink="/analysis">
+        <div class="flex flex-col items-center p-8">
+          <img class="w-24 h-24" src="../../assets/analysis.svg" alt="Analysis-logo"/>
+          <h5 class="mb-1 text-xl font-medium text-emerald-900">
+            Analysis
+          </h5>
+        </div>
+      </button>
+    </div>    
+    <div class="item">
+      <button class="w-full bg-white border border-gray-200 rounded shadow transition-all duration-300 hover:shadow-lg hover:bg-gray-50" routerLink="/login">
+        <div class="flex flex-col items-center p-8">
+          <img class="w-24 h-24" src="../../assets/login.svg" alt="Login-logo"/>
+          <h5 class="mb-1 text-xl font-medium text-emerald-900">
+            Login
+          </h5>
+        </div>
+      </button>
+    </div>  
   </div>
 </div>

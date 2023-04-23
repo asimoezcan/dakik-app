@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
   export class CompainesComponent implements OnInit{
     companies = [];
 
-    constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient, private router: Router) { }
   
     ngOnInit(): void {
       this.fetchcompanies();
@@ -31,6 +32,10 @@ import { HttpClient } from '@angular/common/http';
     deleteAssessment(itemId: number): void {
       this.http.delete(`http://localhost:3000/companies/${itemId}`).subscribe();
     }
+    editCompany(itemId: number): void {
+      this.router.navigate(['/edit-company', itemId]);
+    }
+    
     
   }
   

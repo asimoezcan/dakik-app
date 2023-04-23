@@ -1,49 +1,6 @@
 {
   "users": [],
   "companies": [],
-  "assessments": [
-    {
-      "reportName": "asdsad",
-      "reportDate": "",
-      "reportValidityDate": "",
-      "riskAssessmentMethod": "sdfffds",
-      "riskAssessmentTeam": {
-        "firstName": "",
-        "lastName": "",
-        "title": ""
-      },
-      "workplaceSection": "Kütüphane",
-      "id": 1
-    }
-  ],
-  "analysis": [
-    {
-      "topic": "",
-      "activity": "",
-      "hazardSource": "Sigorta ",
-      "risks": "",
-      "detectionImage": "",
-      "legislation": "",
-      "postPrecautionImage": "",
-      "preDofRiskCalculation": {
-        "preintensity": "",
-        "preprobability": "",
-        "prefrequency": ""
-      },
-      "hazard": "",
-      "recordDate": "",
-      "controlDate": "",
-      "dofDeadline": "",
-      "responsible": "",
-      "performedActivity": "",
-      "requiredPrecautions": "",
-      "currentStatus": "",
-      "postDofRiskCalculation": {
-        "postintensity": 3,
-        "postprobability": "",
-        "postfrequency": ""
-      },
-      "id": 1
-    }
-  ]
+  "assessments": [],
+  "analysis": []
 }
